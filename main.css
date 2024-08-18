@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./Images/background1.jpg");
+    background-size: cover;
+    position: relative;
+}
+.clock-container .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.clock-container .clock {
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    z-index: 2;
+}
+@media (max-width: 991px) {
+    .clock-container .clock {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 767px) {
+    .clock-container .clock {
+        font-size: 4rem;
+    }
+}
